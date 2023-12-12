@@ -1,0 +1,18 @@
+#Personal Project: Plus Equal Application
+#This is going to be a program calculating the cost of my music pre to post production. 
+#This is the overall cost for a month of production
+
+total_funding_needed = 0
+
+#Mix Theory Studio charges a monthly subscription 
+mixTheoryStudio = 240
+
+#Funding Needed
+total_funding_needed += mixTheoryStudio
+
+music_video = 200
+ad_campaign = 400
+# Update total_price here:
+total_funding_needed += music_video
+total_funding_needed += ad_campaign
+print("The total funding needed is", total_funding_needed)

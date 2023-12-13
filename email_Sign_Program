@@ -1,0 +1,14 @@
+#You're a small business owner and you need to set up an email signature for communication through gmail with your employess and partners.
+
+#receive email content from user
+email_content = input("Dear, Employee\n\n")
+
+#add email signature
+email_signature = """email_content, \n
+Business CEO
+The Bussiness of Mine
+1-800 Business\n  
+Best Regards"""
+
+#Display email to review before sending it to the new hires
+print(email_signature)

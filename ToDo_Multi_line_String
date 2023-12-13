@@ -1,0 +1,9 @@
+#assign a multi line string to variable "Objective"
+
+Objective = """
+This document serves as a comprehensive proposal, outlining the financial aspects associated with 'The Auraverse'. 
+It details the expenditures incurred during various stages of our project, including production, recording, release, 
+post-launch activities, advertising, and ongoing operational costs. The primary aim is to 
+ensure a strategic approach to distributing music continuously for sustained profitability."""
+
+print(Objective)

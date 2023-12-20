@@ -1,0 +1,42 @@
+#Gradebook Software: List Management Project
+
+#print functions will be turned to "comments" once the software is updated that incorporate changes to the list.
+
+# Your code below: 
+last_semester_gradebook = [["politics", 80], ["latin", 96], ["dance", 97], ["architecture", 65]]
+
+#create a list of courses. Assign the values into a variable called "subject"
+subject = ["physics", "calculus", "poetry", "history"]
+#print(subject)
+
+#create a list of of scores. Assign the values into a variable called "grades"
+grades = [98, 97, 85, 88]
+#print(grades)
+
+#Take the values from both list and create a 2 dimensional list. Assign the values into a variable called "gradebook"
+gradebook = [["physics", 98], ["calculus", 97], ["poetry", 85], ["history", 88]]
+#print(gradebook)
+
+#computer science grade just came in, I achieved an 100% in the class, Time to insert this information into the system.
+gradebook.append(["computer science", 100])
+#print(gradebook)
+
+#Another class grade was just entered "visual arts", I achieved a 93.
+gradebook.append(["visual arts", 93])
+#print(gradebook)
+
+#Our "visual arts" grade was incorrectedly updated so we actually have 5 more points than before. 
+gradebook.append(["visual arts", 98])
+#print(gradebook)
+
+gradebook[2].remove(85)
+#print(gradebook)
+
+#Need to locate our "poetry" class because the grading has switched from number-based to "Pass" or "Fail", I Passed!
+gradebook[2].append("Pass")
+#print(gradebook)
+
+#Lets combined our last semster with the current information for this semster's gradebook
+full_gradebook = last_semester_gradebook + gradebook
+
+print(full_gradebook)

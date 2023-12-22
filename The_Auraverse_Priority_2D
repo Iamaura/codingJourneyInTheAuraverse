@@ -1,0 +1,89 @@
+# This will be a small-scale project demonstrating competency within List Methods & Functions
+# This List is The Auraverse Project and Priority List Over Time
+
+#PP: "Projects and Priorities"
+The_Auarverse_PP = ["Website Update", "3D Universe Construction", "App Development", "Music Distribution", "Sync Licensing", "Real Estate"]
+#print(The_Auarverse_PP)
+
+#The Auarverse Team is trying to figure out in what order should we be inticate these projects with the timeline checkpoints being labeled as "Phases"
+Phases_of_PP = ["Phase 1", "Phase 2", "Phase 3", "Phase 4"]
+
+
+#We agree on the dates these projects and should be intialized in a @D List
+Phases_PP_Timeline = [["Jan", 10], ["March", 8], ["May", 9], ["July", 5], ["Sep", 19] ]
+#print(Phases_PP_Timeline)
+# We realize that the timeline for these projects needs to be extended beyond four phases because some project processes can't overlap due to efficiency issues.
+# Projects like 3D Construction and Website Development go hand in hand, but the Sync Licensing and Real Estate venture will split the team up too much if done in a single phase.
+
+
+Phases_of_PP.insert(4, "Phase 5")
+#print(Phases_of_PP)
+
+# We've come to the understanding that the "Website Update" and the "3D Universe Construction" are both part of the same project, so we want to insert a new element that describes both. 
+# And remove the first two elements, but we do want to store them for later in case anyone needs to know where the new priority originated in the list.
+
+Removed_Webiste_Update = The_Auarverse_PP.pop(0)
+Removed_Universe_Construction = The_Auarverse_PP.pop(0)
+The_Auarverse_PP.insert(0, "3D Web Design")
+#print(The_Auarverse_PP)
+
+#Now that we've modified all three list to line up with the same amount of elements, we want to combined all the variables together into one list.
+
+Updated_Auraverse_PP = The_Auarverse_PP + Phases_of_PP
+#print(Updated_Auraverse_PP)
+Final_Auraverse_PP = Updated_Auraverse_PP + Phases_PP_Timeline
+#print(Final_Auraverse_PP)
+
+#We've now combined the The Auraverse Priorities and noticed we need to move around some Priorities because we have redefined what "Phase 1" and "Phase 2" should be to generate the best momentum for the company 
+Final_Auraverse_PP.pop(0)
+Final_Auraverse_PP.pop(1)
+Final_Auraverse_PP.insert(0, "Music Distribution")
+Final_Auraverse_PP.insert(1, "3D Web Design'")
+#print(Final_Auraverse_PP)
+#number_elements = print(len(Final_Auraverse_PP)) #Count: 15 
+
+
+
+# The list is somewhat jumbled up, and we want to make it more comprehensive with a 2D list for better visualization of the priorities, along with the timelines and phases.
+The_Auraverse_2d = [['Phase 1', 'Music Distribution', 'Jan', 10], ['Phase 2', '3D Web Design', 'March', 8], ['Phase 3', 'App Development', 'May', 9], ['Phase 4', 'Sync Licensing', 'July', 5], ['Phase 5', 'Real Estate', 'Sep', 19]]
+#number_elements_2d = print(len(The_Auraverse_2d)) #Count: 5, lessened the ammount of elements to call
+print(The_Auraverse_2d)
+
+#there no need to .sort() or sorted() this list because it has been ordered properly based off the 0 index "Phase" in each element of the list
+#BONUS CODE
+
+#Phase 1 breakdown:
+Expense_description = "For", The_Auraverse_2d[0][0], "we will be running advertising with Sound Connect"
+print(Expense_description)
+
+# Twice a month, on the 5th and the 15th, we check on the ad performance.
+# Once a month, we review our budget on the 20th to determine if we can continue the ad campaign for the following month; the expense is $400 per month.
+# Every month on the 28th, we make a payment to fund the ad campaign.
+
+date_Ad_KPI_Update = 5, 15
+date_Budget_Review = 20
+date_Invoice_Date = 28
+
+#We're setting up notifications for each phase beginning with Phase 1 so we'll be alerted on what we're to do through the timeframe of the "Music Distribution Project"
+
+if date_Ad_KPI_Update == 5 or 15:
+    print("Check Ad Performance, request KPIs")
+elif date_Budget_Review == 20:
+    print("Check Ad Budget, confirm ad campaign's conitunous for next months ")
+elif date_Invoice_Date == 28:
+    print("Confirm Ad payment so Sound Connect fuel the ad campaign for the duration of another month")
+else:
+    print("No Task Available")
+
+#We need to make sure if the dates are passed without actions being done we will be alerted starting with date_Invoice_Date
+
+Invoice_Confirmation = True
+Invoice_Ammount = 400
+Invoice_Notification = "Invoice Overdue! Please, Review Budget and confirm transaction with Sound Connect"
+
+if Invoice_Confirmation == True:
+    print("Ammount Sent For Ad:", Invoice_Ammount)
+elif Invoice_Confirmation == False:
+    print(Invoice_Notification)
+    note = (input("Reason For Pass Due Invoice:" )) #Reason for pass due invoice has to be accounted for so that the right department can take action
+    print(note)

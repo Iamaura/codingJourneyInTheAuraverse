@@ -1,0 +1,28 @@
+Sal's Shipping: Project
+weight = 20
+flat_charge = 20
+
+#Ground Shipping
+if weight <= 2:
+  print("Ground Shipping: ", weight*1.5 + flat_charge) 
+elif (weight > 2 and weight <= 6):
+  print("Ground Shipping: ", weight *3 + flat_charge) 
+elif (weight > 6 and weight <= 10):
+  print("Ground Shipping: ", weight * 4 + flat_charge) 
+else:
+  print("Ground Shipping: ", weight *4.75 + flat_charge)
+
+#Premium Ground Shipping
+Premium_flat_charge = 125
+print("Premium Shipping: ", Premium_flat_charge)
+
+#Drone Shipping 
+if weight <= 2:
+  print("Drone Shipping: ", weight*4.50) 
+elif (weight > 2 and weight <= 6):
+  print("Drone Shipping: ", weight *9.00) 
+elif (weight > 6 and weight <= 10):
+  print("Drone Shipping: ", weight * 12.00) 
+else:
+  drone_shipping = weight *14.25
+  print("Drone Shipping: $", drone_shipping)

@@ -1,0 +1,39 @@
+Data Analyst For Carly's Clippers
+
+hairstyles = ["bouffant", "pixie", "dreadlocks", "crew", "bowl", "bob", "mohawk", "flattop"]
+
+prices = [30, 25, 40, 20, 20, 35, 50, 35]
+
+last_week = [2, 3, 5, 8, 4, 4, 6, 2]
+
+total_price = 0
+length = len(prices)
+#print(length)
+
+for price in prices:
+  #print(price)
+  total_price += price
+  average_price = total_price/length
+
+#print("Average Haircut Price: ", int(average_price))
+
+new_prices = [price - 5 for price in prices]
+print(new_prices)
+
+total_revenue = 0
+hairstyles_length = len(hairstyles)
+
+for i in range(8):
+  total_revenue += prices[i] + last_week[i]
+  average_daily_revenue = total_revenue / hairstyles_length
+#print("Total Revenue: ", total_revenue)
+#print("Average Revenue: ", int(average_daily_revenue))
+
+cuts_under_30 = [hairstyles[i] for i in range(len(new_prices)) if new_prices[i] < 30]
+
+#last code entry after two hints
+#cuts_under_30 = [hairstyle[i] for i in range(len(new_prices)) if new_prices[i] < 30]
+
+print(cuts_under_30)
+
+#CodeAcademy Project

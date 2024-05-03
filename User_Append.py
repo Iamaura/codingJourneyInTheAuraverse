@@ -7,8 +7,7 @@
 #    Timer Completion Message: Once the timer ends, display a message letting the user know they can continue to input messages.
 #    Resume Input: After the timer message, prompt the user again to continue adding inputs to database.
 
-
-
+import time 
 #       Initialize a List: Create a list named database to store user inputs.
 
 database = []
@@ -22,3 +21,6 @@ while len(database) < 5:
     if len(database) == 5:
         print("\tSorry your last comment was not posted.")
         print("\tYou've reached the max amount of comments for now, please wait.")
+        time.sleep(5)
+        database.clear()
+        print("You may comment again now")

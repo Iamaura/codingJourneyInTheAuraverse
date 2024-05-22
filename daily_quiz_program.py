@@ -1,12 +1,9 @@
-# Create a test that users can take and create a system where they can answer and then 
-# get their score afterwards
+# Creating a 3 question quiz that will store users names, answers, and grade their input so that they can recieve their grade after they finish.
 
-#   declaring an empty list but will be identifying what purpose this will play soon 
-
+""""Empty List That Will Store Student Names"""
 students = []
 
-#   This empty list will store the answers from the students in order to be graded
-
+""""Empty List That Will Store Student Answers"""
 answers = []
 
 question_1 = 'Which of the following is a correct variable assignment in Python?'
@@ -25,7 +22,7 @@ prompt += "Please enter your name whenever you're ready to begin the quiz."
 while test_active:
     #   Enter your name so we can store you as a student 
     name = input("\nWhat is your name? ")
-    students.append(name)
+    students.append(name.title())
 
     print(f"\n{question_1}")
     for option in options:
@@ -67,15 +64,21 @@ print("\n--- Your Final Score ---")
 answer_key = ['b', 'b', 'c']
 
 score = 0
-for answer in answers:
-    if answers[0] == 'b':
-        score += 1
-    elif answers[1] == 'b':
-        score += 2
-    elif answers[2] == 'c':
-        score += 3
 
-print(f"\nYou scored a {score} out of 3!")
+if answers[0] == 'b':
+    score += 1
+else: 
+    score = score
+if answers[1] == 'b':
+    score += 1 
+else: 
+    scoore = score
+if answers[2] == 'c':
+    score += 1
+else: 
+    score = score
+
+print(f"\n{students[0]} scored a {score} out of 3!")
 
 if score == 3:
     print("Congradulations! You received an A on your Quiz!")
@@ -83,5 +86,3 @@ elif score == 2:
     print("You received an D on your Quiz, you should try again.")
 else:
     print("You received an F on your Quiz, you should study before taking it again")
-
-    

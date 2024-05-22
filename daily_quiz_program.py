@@ -81,7 +81,7 @@ if score == 3:
     print("Congradulations! You received an A on your Quiz!")
 elif score == 2:
     print("You received an D on your Quiz, you should try again.")
-elif score == 1:
+else:
     print("You received an F on your Quiz, you should study before taking it again")
 
     
